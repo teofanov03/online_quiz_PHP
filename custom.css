@@ -1,0 +1,403 @@
+/* --- BODY --- */
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e0f0ff, #c0e0ff);
+    min-height: 100vh;
+    color: #000; /* crna boja za sav tekst u sadržaju */
+}
+
+/* --- FLEX ZA FOOTER --- */
+.all-content-wrapper {
+    flex: 1; /* uzima sav preostali prostor između headera i footera */
+}
+
+/* --- HEADER --- */
+.header-top-area {
+    background-color: #004bb5; /* tamnija plava */
+    padding: 10px 0;
+    width: 100%;
+}
+
+.header-top-wraper {
+    max-width: 1200px; /* ograničava širinu */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Navigacioni linkovi */
+.header-top-menu .mai-top-nav {
+    display: flex;
+    gap: 20px; /* razmak između linkova */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.header-top-menu .header-link {
+    color: #fff; /* bel tekst */
+    transition: color 0.3s ease, background 0.3s ease;
+    font-weight: bold;
+}
+
+.header-top-menu .header-link:hover {
+    color: #00c0ff; /* svetloplava na hover */
+    text-decoration: none;
+}
+
+/* Dropdown meni linkovi */
+.dropdown-header-top.author-log.dropdown-menu li a {
+    color: #333;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-header-top.author-log.dropdown-menu li a:hover {
+    background-color: #004bb5; /* tamnija plava */
+    color: #fff !important;
+}
+
+/* Header right (avatar) */
+/* Hover efekat za avatar u headeru */
+.header-right-info a.header-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    padding: 5px 8px;
+    border-radius: 6px;
+    
+}
+.header-right-info {
+    position: relative; 
+    display: flex;
+    align-items: center;
+}
+.header-right-info .dropdown-menu {
+    top: 100%;      /* odmah ispod avatara */
+    right: 0;        /* desno poravnanje sa avatarom */
+    left: auto;      /* isključuje default levo poravnanje */
+    margin-top: 5px; /* mali razmak između avatara i menija */
+}
+.header-right-info a.header-link:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* lagani svetli overlay */
+    transform: translateY(-2px); /* blagi podizanje */
+    text-decoration: none;
+}
+
+.header-right-info a.header-link img {
+    border-radius: 50%; /* avatar okrugao */
+    transition: transform 0.3s ease;
+}
+
+.header-right-info a.header-link:hover img {
+    transform: scale(1.1); /* lagano povećanje avatara */
+}
+
+/* Strelica ostaje bela */
+.header-right-info a.header-link .fa-angle-down {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+
+.dropdown-header-top.author-log.dropdown-menu li a:hover {
+    background-color: #004bb5; /* tamnija plava za hover */
+    color: #fff !important; /* bel tekst na hover */
+    top: 100%; /* odmah ispod avatara */
+    right: 0;  /* poravnaj desno */
+    left: auto; /* ukloni default levo */
+    min-width: 150px; 
+}
+
+/* --- FOOTER --- */
+.footer-copyright-area {
+    background-color: #004b8d; /* tamnija plava */
+    padding: 15px 0;
+    text-align: center;
+    color: #fff; /* bel tekst u footeru */
+    width: 100%;
+}
+.footer-copyright-area p:hover {
+    color: #ffd700; /* zlatna na hover */
+    transition: color 0.3s ease;
+}
+
+/* --- WHITE BLOCK (sadržaj) --- */
+.white-block {
+    max-width: 1000px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    color: #000; /* crna boja teksta */
+}
+
+/* --- TABELA --- */
+/* --- Naslov --- */
+.white-block h2.page-title {
+    margin: 25px 0;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+}
+
+/* --- Tabela rezultata --- */
+.results-table {
+    width: 90%;
+    margin: 0 auto 30px auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    border-collapse: collapse;
+}
+
+.results-table thead {
+    background-color: #006df0; /* tamnoplava */
+    color: #fff; /* bel tekst */
+    text-align: center;
+}
+
+.results-table th, 
+.results-table td {
+    padding: 12px 15px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.results-table tbody tr:nth-child(even) {
+    background-color: #f5f5f5; /* svetlija pozadina za parne redove */
+}
+
+.results-table tbody tr:hover {
+    background-color: #d0e4ff; /* plavi hover */
+    transition: 0.3s;
+}
+
+/* --- Kada nema rezultata --- */
+.no-results {
+    margin: 50px 0;
+    font-size: 22px;
+    color: #555;
+    text-align: center;
+}
+
+/* --- NO RESULTS --- */
+.no-results {
+    margin: 50px 0;
+    font-size: 22px;
+    text-align: center;
+    color: #000; /* crna boja */
+}
+
+/* --- CATEGORY WRAPPER --- */
+.category-container {
+    max-width: 900px;
+    margin: 50px auto;
+    text-align: center;
+}
+.category-wrapper {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    color: #000; /* crna boja teksta */
+}
+
+/* --- CATEGORY BUTTONS --- */
+.btn-category {
+    min-width: 50%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    color: #fff; /* bel tekst */
+    background-color: #006df0; /* osnovna plava */
+    border: none;
+}
+
+.btn-category:hover {
+    background-color: #004bb5; /* tamnija plava koja se uklapa sa header/footer */
+    color: #fff; /* tekst ostaje bel */
+    transform: translateY(-2px);
+}
+
+/* --- PAGE TITLE --- */
+.page-title {
+    margin: 20px 0;
+    font-weight: bold;
+    color: #000; /* crna boja */
+}
+/* --- LOGIN FORM --- */
+body.login-page {
+    background: linear-gradient(135deg, #1f4037, #99f2c8); /* ista pozadina kao register */
+    font-family: 'Play', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    animation: fadeInBody 1s ease;
+}
+
+/* Koristi iste animacije kao register */
+@keyframes fadeInBody {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    animation: fadeInContainer 0.8s ease;
+  
+}
+
+@keyframes fadeInContainer {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.login-container h3 {
+    margin-bottom: 25px;
+    font-weight: 700;
+    color: #333;
+}
+
+.login-container .form-control {
+    border-radius: 6px;
+    height: 42px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.login-container .form-control:focus {
+    box-shadow: 0 0 8px rgba(0,109,240,0.5);
+    border-color: #006df0;
+}
+
+.login-container .btn-login {
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 6px;
+    background-color: #006df0;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.login-container .btn-login:hover {
+    background-color: #0056c1;
+    transform: translateY(-2px);
+}
+
+.login-container .alert {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* --- REGISTER FORM --- */
+body.register-page {
+    background: linear-gradient(135deg, #1f4037, #99f2c8);
+    font-family: 'Play', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    animation: fadeInBody 1s ease;
+}
+
+@keyframes fadeInBody {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.register-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    animation: fadeInContainer 0.8s ease;
+    text-align: center;
+}
+
+@keyframes fadeInContainer {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.register-container h3 {
+    margin-bottom: 25px;
+    font-weight: 700;
+    color: #333;
+}
+
+.register-container .form-control {
+    border-radius: 6px;
+    height: 42px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.register-container .form-control:focus {
+    box-shadow: 0 0 8px rgba(0,109,240,0.5);
+    border-color: #006df0;
+}
+
+.register-container .loginbtn {
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.register-container .loginbtn:hover {
+    background-color: #0056c1;
+    transform: translateY(-2px);
+}
+
+.register-container .login-link {
+    display: block;
+    margin-top: 15px;
+    color: #006df0;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.register-container .login-link:hover {
+    color: #004a8f;
+    text-decoration: underline;
+}
+
+.register-container .alert {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+@media (max-width: 576px) {
+    .register-container {
+        padding: 25px 15px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+}
